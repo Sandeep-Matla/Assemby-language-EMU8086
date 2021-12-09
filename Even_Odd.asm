@@ -1,7 +1,9 @@
+; Sandeep Matla
 ;Number in al is even or odd
 
 include 'emu8086.inc'
-call scan_num
+call scan_num   
+printn
 mov al, cl
 mov bl, 2
 div bl

@@ -1,11 +1,13 @@
+;Sandeep Matla
 ; polyndrome
 include 'emu8086.inc'
 
 org 100h
 
-;call scan_num
+call scan_num     
+printn
 
-mov cx,727
+;mov cx,727
 
 mov n,cx
 

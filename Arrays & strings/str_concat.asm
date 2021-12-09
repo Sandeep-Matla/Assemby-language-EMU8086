@@ -1,3 +1,4 @@
+;Sandeep Matla
 ;Program to concatinate strings
 
 include 'emu8086.inc'  
@@ -37,14 +38,6 @@ lea di,s2
 
 printn
 
-mov ah,9
-mov dx, offset s1
-int 21h
-
-mov dx, offset s2
-int 21h
-
-
 lea si,s1
 str1_end:
     cmp [si],'$'
@@ -60,10 +53,6 @@ concat:
         JE concat_end
     mov al,[di]
     mov [si],al
-    printn
-    mov dl,al
-    mov ah,2
-    int 21h
     
     inc di
     inc si

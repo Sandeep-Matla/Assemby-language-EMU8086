@@ -1,3 +1,4 @@
+;Sandeep Matla
 ;Fibonocci
 
 include 'emu8086.inc'
@@ -5,10 +6,11 @@ include 'emu8086.inc'
 mov al,1
 mov bl,0
 
-print '0'
+print ' Fibanocci Series is : '
 printn
-print '1'
-printn 
+print '0 ,'
+
+print ' 1 ,' 
 
 mov cx,10
 
@@ -16,7 +18,7 @@ add al,bl
 mov bh,al 
 
 call print_num
-printn
+print  ' , '
 
 loopSt:
     
@@ -26,7 +28,7 @@ loopSt:
      
     
     call print_num
-    printn
+    print ' , '
 
     
     loop loopSt

@@ -1,3 +1,4 @@
+;Sandeep Matla
 ;Read & print Array
 
 include 'emu8086.inc' 
@@ -26,14 +27,14 @@ read_exit:
 
 mov bx,5
 lea si , arr 
-print 'Your Array' 
+print 'Your Array : ' 
     
 print_arr:   
 
     cmp bx,0
         JE print_end
     mov al, [si]
-    
+    print ' '
     call print_num
     inc si
     sub bx,1

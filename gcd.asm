@@ -1,3 +1,4 @@
+;Sandeep Matla
 ;GCD 
 include 'emu8086.inc'
 print 'Enter numbers : '

@@ -1,8 +1,25 @@
+;Sandeep Matla
 ; program to Sort an Array
 
 include 'emu8086.inc'
 lea si,arr
 mov dl,6
+
+lea si,arr 
+Arr_Read:
+    
+    cmp [si],'0'
+        JE  read_exit;
+    call scan_num
+    printn
+    mov [si],cl    
+    inc si    
+    sub bx,1     
+    jmp Arr_Read
+
+read_exit:    
+
+lea si , arr 
 
 Sort:
     lea si, arr
@@ -28,7 +45,8 @@ Sort:
             JE sort_end
         jmp sort
 sort_end:
-    lea si,arr
+    lea si,arr  
+    print 'Sorted Array : '
     printArr:
         cmp [si],'0'
             JE exit
@@ -45,4 +63,5 @@ ret
 arr db 2,4,1,10,8,3,'0'
 
 define_print_num
-define_print_num_uns
+define_print_num_uns          
+define_scan_num

@@ -1,3 +1,4 @@
+;Sandeep Matla
 ; Searching in an Array
 
 include 'emu8086.inc'
@@ -20,7 +21,9 @@ Arr_Read:
 
 read_exit:    
 
-Ask_Again:
+Ask_Again:             
+    printn
+    printn
     print 'Enter num to check in Array : '
     
     cmp cl,'e' ; Ask again loop break;

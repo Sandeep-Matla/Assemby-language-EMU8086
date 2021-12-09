@@ -5,7 +5,7 @@ include 'emu8086.inc'
 org 100h
 
 call scan_num
-
+printn
 mov n,cx
 
 mov bx,0
@@ -18,7 +18,8 @@ Check:
     cmp cx,n
         JE check_Perfect
         
-        mov ax,n
+        mov ax,n   
+        mov dx,0
         div cx
         
         cmp dx,0
